@@ -34,6 +34,15 @@ with open(output_csv) as csv_file:
     val = "10.10"
     if val.isdigit():
         print(int(val))
+# average of change in "Profit/Losses"
+
+with open(output_csv) as csv_file:
+    csvreader = csv.reader(csv_file, delimiter=',')
+    profit/loss = []
+    average = sum(profit/loss) / len(profit/loss)
+  
+    print(f'Average Change: {str(round(average, 2)}')
+
 
     # the greatest increase in profits (date and ampunt) 
     # #over the entire period
