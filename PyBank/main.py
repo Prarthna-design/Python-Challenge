@@ -19,4 +19,13 @@ with open(output_csv) as csv_file:
     print(f'Total Months: {months}')
 
 
+    #The net total amount of "Profit/Losses" over the entire period
+
+    
+
+
+
+
+
+
 
