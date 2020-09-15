@@ -49,6 +49,15 @@ with open(output_csv) as csv_file:
 with open(output_csv) as csv_file:
     csvreader = csv.reader(csv_file, delimiter=',')
     
+# need to find way to read the data in pair for data and amount
+#nedd to calculate difference between each data points. 
+#create new column? 
+# identify the highest profit within new column
+#identify the lowest loss within new column
+#???????????????????????????????????????????
+
+# Print the Analysis to the terminal 
+# export a text file with the results.
 
 
 
