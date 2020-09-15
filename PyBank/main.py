@@ -38,7 +38,8 @@ with open(output_csv) as csv_file:
 
 with open(output_csv) as csv_file:
     csvreader = csv.reader(csv_file, delimiter=',')
-    profit/loss = []
+
+profit/loss = []
     average = sum(profit/loss) / len(profit/loss)
   
     print(f'Average Change: {str(round(average, 2)}')
