@@ -6,4 +6,5 @@ output_csv = os.path.join("Resources", ".election_data.csv.icloud")
 
 
 print('Election Results')
-# total no of votes cast without counting for dulicates
+# total no of votes cast 
+
