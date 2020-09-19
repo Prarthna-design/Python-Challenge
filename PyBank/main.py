@@ -24,41 +24,58 @@ with open(output_csv) as csv_file:
 
 with open(output_csv) as csv_file:
     csvreader = csv.reader(csv_file, delimiter=',')
+    header = next(csvreader)
     net = []
+    months = []
     for row in csvreader: 
-        net.append(int(row[1]))
-    
+        net.append(float(row[1]))
+        months.append(row[0])
+        # print(type(row[1]))
+# print(months)
 
-    print(f'Total: {sum(net[1])}')
-#trying to solve ValueError for line 29
-    val = "10.10"
-    if val.isdigit():
-        print(int(val))
-# average of change in "Profit/Losses"
+print(f'Total: {sum(net)}')
 
-with open(output_csv) as csv_file:
-    csvreader = csv.reader(csv_file, delimiter=',')
+# average of change in "Profit_Losses"
+profitlosschange = []
+for value in net[1:]:
+    i = net[net.index(value) - 1]
+    change = value - i
+    profitlosschange.append(change)
+# print(profitlosschange)
 
-profit/loss = []
-    average = sum(profit/loss) / len(profit/loss)
+
+average = sum(profitlosschange) / len(profitlosschange)
   
-    print(f'Average Change: {str(round(average, 2)}')
+print(f'Average Change: {str(round(average, 2))}')
+
+GreatestIncrease = max(profitlosschange)
+print(GreatestIncrease)
+g = profitlosschange.index(GreatestIncrease) +1
+maxmonth = months[g]
+print(maxmonth)
+
+GreatestDecrease = min(profitlosschange)
+print(GreatestDecrease)
+d = profitlosschange.index(GreatestDecrease) +1
+minmonth = months[d]
+print(minmonth)
 
 
-    # the greatest increase in profits (date and ampunt) 
-    # #over the entire period
-with open(output_csv) as csv_file:
-    csvreader = csv.reader(csv_file, delimiter=',')
+
+#     # the greatest increase in profits (date and ampunt) 
+#     # #over the entire period
+# with open(output_csv) as csv_file:
+#     csvreader = csv.reader(csv_file, delimiter=',')
     
-# need to find way to read the data in pair for data and amount
-#nedd to calculate difference between each data points. 
-#create new column? 
-# identify the highest profit within new column
-#identify the lowest loss within new column
-#???????????????????????????????????????????
+# # need to find way to read the data in pair for data and amount
+# #nedd to calculate difference between each data points. 
+# #create new column? 
+# # identify the highest profit within new column
+# #identify the lowest loss within new column
+# #???????????????????????????????????????????
 
-# Print the Analysis to the terminal 
-# export a text file with the results.
+# # Print the Analysis to the terminal 
+# # export a text file with the results.
 
 
 
