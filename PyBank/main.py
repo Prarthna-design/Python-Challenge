@@ -46,19 +46,19 @@ for value in net[1:]:
 
 average = sum(profitlosschange) / len(profitlosschange)
   
-print(f'Average Change: {str(round(average, 2))}')
+print(f'Average Change: $ {str(round(average, 2))}')
 
 GreatestIncrease = max(profitlosschange)
 print(GreatestIncrease)
 g = profitlosschange.index(GreatestIncrease) +1
 maxmonth = months[g]
-print(maxmonth)
+print(f'Greatest Increase in Profits: {maxmonth} ${str(GreatestIncrease)}')
 
 GreatestDecrease = min(profitlosschange)
-print(GreatestDecrease)
+# print(GreatestDecrease)
 d = profitlosschange.index(GreatestDecrease) +1
 minmonth = months[d]
-print(minmonth)
+# print(minmonth)
 
 
 
