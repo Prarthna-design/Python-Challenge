@@ -63,6 +63,18 @@ minmonth = months[d]
 # print(minmonth)
 print(f'Greatest Decrease in Profits: {minmonth} $ {str(GreatestDecrease)}')
 
+output_csv = os.path.join("analysis", "analysis.csv")
+with open(output_csv, "w") as csvfile:
+    csvwriter = csv.writer(csvfile, delimiter=',')
+
+
+    csvwriter.writerow(["Total Months: 86"])
+    csvwriter.writerow(["Total: $38382578"])
+    csvwriter.writerow(["Average Change: $-2315.12"])
+    csvwriter.writerow(["Greatest Increase in Profits: Feb-2012  $ 1926159"])
+    csvwriter.writerow(["Greatest Decrease in Profits: Sep-2013 $ -2196167"])
+
+        
 
 
 
